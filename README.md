@@ -43,19 +43,12 @@ Yazan: Jag använde AI så att förstå hur ska kopplingen mellan Main.java och 
 Victoria: Jag använde inte AI-verktyg eller externa hjälpmedel när jag arbetade med Medlem. Utan utgick istället från kursmaterialet som vi haft tidigare veckor. Jag ville försöka lösa min del själv och förstå hur klassen fungerar. När jag blev osäker gick jag igenom koden och funderade på upplägget samt hur get-metoderna hänger ihop. Hade uppgiften varit något större så hade jag kunnat använda AI för att få ett hum om hur jag skulle kunna gå vidare om jag körde fast, eller ge mig idéer för olika eventuella tillägg för att kunna utöka projektet.
 
 Julio:
-
-Jag ansvarade för klassen Register.java. Mitt arbete var att skapa själva medlemsregistret och se till att det kunde hantera medlemmarna som registreras i programmet.
-
-Jag skapade en ArrayList<Medlem> för att lagra medlemmarna. På så sätt kan registret innehålla flera medlemsobjekt medan programmet körs.
-
-Jag implementerade metoden laggTillMedlem(Medlem medlem), som lägger till en medlem i listan. Innan medlemmen läggs till kontrollerar metoden att objektet inte är null och att medlemsnumret inte redan finns i registret. Metoden returnerar true om medlemmen läggs till och false om den inte kan läggas till.
-
-Jag skapade också metoden visaAllaMedlemmar(), som skriver ut alla registrerade medlemmar. Om registret är tomt visas ett meddelande i stället.
-
-För att kunna hitta medlemmar implementerade jag två versioner av metoden sokMedlem(). Den ena söker efter medlemsnummer och den andra söker efter namn. Namnsökningen använder equalsIgnoreCase(), vilket innebär att sökningen fungerar även om användaren skriver namnet med stora eller små bokstäver.
-
-När Register.java kopplades ihop med Main.java användes metoderna för att registrera, visa och söka efter medlemmar via programmets meny. Jag behövde därför se till att metoderna returnerade rätt resultat så att Main.java kunde visa ett lämpligt meddelande för användaren.
-
-Min del bidrog till att separera programmets ansvar: Medlem.java beskriver en medlem, Register.java hanterar samlingen av medlemmar och Main.java hanterar användarens meny och inmatning.
+Jag ansvarade för klassen Register.java. Min uppgift var att skapa ett medlemsregister där man kan lägga till, visa och söka efter medlemmar.
+Jag använde en ArrayList<Medlem> för att kunna spara flera medlemmar i registret medan programmet körs.
+Jag skapade metoden laggTillMedlem(Medlem medlem) för att lägga till nya medlemmar. Där kontrollerade jag först att medlemmen inte var null och att medlemsnumret inte redan fanns i registret. Om allt stämde lades medlemmen till och metoden returnerade true. Annars returnerade den false.
+Jag gjorde också metoden visaAllaMedlemmar(), som visar alla medlemmar som finns registrerade. Om det inte finns några medlemmar visas istället ett meddelande om att registret är tomt.
+För att kunna söka efter medlemmar skapade jag två versioner av metoden sokMedlem(). Den ena söker efter medlemsnummer och den andra efter namn. När man söker efter namn använder jag equalsIgnoreCase(), så att det inte spelar någon roll om man skriver med stora eller små bokstäver.
+När vi sedan kopplade ihop Register.java med Main.java kunde vi använda metoderna genom programmets meny för att lägga till, visa och söka efter medlemmar. Det var därför viktigt att metoderna fungerade som de skulle och skickade tillbaka rätt resultat.
+På det här sättet fick varje klass sin egen uppgift. Medlem.java innehåller information om medlemmen, Register.java hanterar alla medlemmar och Main.java sköter menyn och det som användaren skriver in.
 
 
